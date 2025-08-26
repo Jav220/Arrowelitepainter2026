@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Elite Painters - Premium Painting Services in Tulsa & Broken Arrow</title>
+    <meta name="description" content="Professional residential and commercial painting services in Tulsa, Broken Arrow, Bixby, and Jenks. Interior painting, exterior painting, cabinet refinishing, and commercial painting.">
+    
+    <style>
+        /* CSS Reset & Box Sizing */
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        * {
+          margin: 0;
+        }
+
+        body {
+          line-height: 1.6;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+          display: block;
+          max-width: 100%;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+          font: inherit;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          overflow-wrap: break-word;
+        }
+
+        /* CSS Variables */
+        :root {
+          --bg: #ffffff;
+          --text: #222;
+          --muted: #666;
+          --brand: #116149;
+          --brand-600: #0f5132;
+          --surface: #f7f9f8;
+          
+          /* Spacing Scale */
+          --space-4: 0.25rem;
+          --space-8: 0.5rem;
+          --space-12: 0.75rem;
+          --space-16: 1rem;
+          --space-24: 1.5rem;
+          --space-32: 2rem;
+          --space-48: 3rem;
+          --space-64: 4rem;
+          
+          /* Font Sizes */
+          --text-sm: 0.875rem;
+          --text-base: 1rem;
+          --text-lg: 1.125rem;
+          --text-xl: 1.25rem;
+          --text-2xl: 1.5rem;
+          --text-3xl: 1.875rem;
+          --text-4xl: 2.25rem;
+          --text-5xl: 3rem;
+          
+          /* Shadows */
+          --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+          --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+          --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+          --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+          
+          /* Radius */
+          --radius: 0.5rem;
+          --radius-md: 0.75rem;
+          --radius-lg: 1rem;
+        }
+
+        /* Global Typography */
+        body {
+          font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Inter, sans-serif;
+          background-color: var(--bg);
+          color: var(--text);
+          line-height: 1.6;
+          letter-spacing: -0.01em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          line-height: 1.125;
+          letter-spacing: -0.025em;
+          font-weight: 600;
+          margin-bottom: var(--space-16);
+        }
+
+        h1 {
+          font-size: var(--text-4xl);
+          font-weight: 700;
+        }
+
+        h2 {
+          font-size: var(--text-3xl);
+          text-align: center;
+          margin-bottom: var(--space-32);
+        }
+
+        h3 {
+          font-size: var(--text-2xl);
+        }
+
+        p {
+          margin-bottom: var(--space-16);
+        }
+
+        a {
+          color: var(--brand);
+          text-decoration: none;
+          transition: color 0.2s ease;
+        }
+
+        a:hover {
+          color: var(--brand-600);
+        }
+
+        a:focus {
+          outline: 2px solid var(--brand);
+          outline-offset: 2px;
+          border-radius: 2px;
+        }
+
+        /* Layout & Container */
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 var(--space-24);
+        }
+
+        /* Navigation */
+        nav {
+          background-color: var(--bg);
+          border-bottom: 1px solid #e5e7eb;
+          position: sticky;
+          top: 0;
+          z-index: 50;
+          box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: var(--space-16) var(--space-24);
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .nav-logo {
+          display: flex;
+          align-items: center;
+          font-size: var(--text-xl);
+          font-weight: 700;
+          color: var(--brand);
+        }
+
+        .nav-menu {
+          display: flex;
+          list-style: none;
+          gap: var(--space-32);
+          margin: 0;
+          padding: 0;
+        }
+
+        .nav-link {
+          font-weight: 500;
+          color: var(--text);
+          padding: var(--space-8) var(--space-12);
+          border-radius: var(--radius);
+          transition: all 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+          background-color: var(--surface);
+          color: var(--brand);
+        }
+
+        /* Hero Section */
+        .hero {
+          background: linear-gradient(135deg, var(--surface) 0%, #e8f5f0 100%);
+          padding: var(--space-64) 0;
+          text-align: center;
+        }
+
+        .hero h1 {
+          font-size: var(--text-5xl);
+          margin-bottom: var(--space-24);
+          color: var(--brand);
+        }
+
+        .hero-tagline {
+          font-size: var(--text-xl);
+          color: var(--muted);
+          margin-bottom: var(--space-32);
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        /* Buttons */
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: var(--space-16) var(--space-32);
+          font-size: var(--text-lg);
+          font-weight: 600;
+          border-radius: var(--radius);
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-decoration: none;
+          line-height: 1.5;
+        }
+
+        .btn-primary {
+          background-color: var(--brand);
+          color: white;
+          box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+          background-color: var(--brand-600);
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-lg);
+          color: white;
+        }
+
+        .btn-secondary {
+          background-color: transparent;
+          color: var(--brand);
+          border: 2px solid var(--brand);
+          padding: var(--space-12) var(--space-24);
+        }
+
+        .btn-secondary:hover {
+          background-color: var(--brand);
+          color: white;
+        }
+
+        /* Sections */
+        section {
+          padding: var(--space-64) 0;
+        }
+
+        section:nth-child(even) {
+          background-color: var(--surface);
+        }
+
+        /* Services Section */
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: var(--space-32);
+          margin-top: var(--space-32);
+        }
+
+        .service-card {
+          background-color: var(--bg);
+          border-radius: var(--radius-lg);
+          box-shadow: var(--shadow);
+          padding: var(--space-32);
+          text-align: center;
+          transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+          transform: translateY(-8px);
+          box-shadow: var(--shadow-lg);
+        }
+
+        .service-card img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin: 0 auto var(--space-24);
+          background-color: var(--surface);
+        }
+
+        .service-card h3 {
+          color: var(--brand);
+          margin-bottom: var(--space-16);
+        }
+
+        /* Recent Projects */
+        .projects-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: var(--space-24);
+          margin: var(--space-32) 0;
+        }
+
+        .project-item {
+          position: relative;
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          box-shadow: var(--shadow);
+          transition: all 0.3s ease;
+          background-color: var(--surface);
+          min-height: 250px;
+        }
+
+        .project-item:hover {
+          transform: scale(1.02);
+          box-shadow: var(--shadow-lg);
+        }
+
+        .project-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(transparent, rgba(0,0,0,0.8));
+          color: white;
+          padding: var(--space-24);
+        }
+
+        .project-overlay h3 {
+          margin-bottom: var(--space-8);
+          color: white;
+        }
+
+        .project-overlay p {
+          margin: 0;
+          color: #e5e7eb;
+        }
+
+        /* Why Choose Us */
+        .features-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: var(--space-32);
+          margin-top: var(--space-32);
+        }
+
+        .feature {
+          text-align: center;
+          padding: var(--space-24);
+        }
+
+        .feature-icon {
+          font-size: var(--text-4xl);
+          margin-bottom: var(--space-16);
+        }
+
+        .feature h3 {
+          color: var(--brand);
+          margin-bottom: var(--space-12);
+        }
+
+        /* Call to Action */
+        .cta-section {
+          background: linear-gradient(135deg, var(--brand) 0%, var(--brand-600) 100%);
+          color: white;
+          text-align: center;
+        }
+
+        .cta-section h2 {
+          color: white;
+          margin-bottom: var(--space-16);
+        }
+
+        .cta-section p {
+          font-size: var(--text-lg);
+          margin-bottom: var(--space-32);
+          opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+          background-color: var(--text);
+          color: white;
+          padding: var(--space-64) 0 var(--space-32);
+        }
+
+        .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: var(--space-32);
+          margin-bottom: var(--space-32);
+        }
+
+        .footer-section h3 {
+          color: white;
+          margin-bottom: var(--space-16);
+        }
+
+        .footer-section p,
+        .footer-section a {
+          color: #9ca3af;
+          margin-bottom: var(--space-8);
+        }
+
+        .footer-section a:hover {
+          color: white;
+        }
+
+        .footer-bottom {
+          text-align: center;
+          padding-top: var(--space-32);
+          border-top: 1px solid #374151;
+          color: #9ca3af;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .nav-menu {
+            display: none;
+          }
+          
+          .hero h1 {
+            font-size: var(--text-3xl);
+          }
+          
+          .hero-tagline {
+            font-size: var(--text-lg);
+          }
+          
+          .services-grid,
+          .projects-grid,
+          .features-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        /* Text Center Utility */
+        .text-center {
+          text-align: center;
+        }
+
+        /* Placeholder for missing images */
+        .img-placeholder {
+          background: linear-gradient(135deg, var(--surface), #d1d5db);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--muted);
+          font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                Arrow Elite Painters
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Arrow Elite Painters</h1>
+            <p class="hero-tagline">Premium Residential & Commercial Painting Services in Tulsa & Broken Arrow</p>
+            <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Expert Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="img-placeholder" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1.5rem;">🏠</div>
+                    <h3>Interior Painting</h3>
+                    <p>Transform your home's interior with our professional painting services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="img-placeholder" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1.5rem;">🏡</div>
+                    <h3>Exterior Painting</h3>
+                    <p>Protect and beautify your home's exterior with premium quality paints.</p>
+                </div>
+                <div class="service-card">
+                    <div class="img-placeholder" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1.5rem;">🚪</div>
+                    <h3>Cabinet Refinishing</h3>
+                    <p>Give your kitchen a fresh new look with our cabinet refinishing services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="img-placeholder" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1.5rem;">🏢</div>
+                    <h3>Commercial Painting</h3>
+                    <p>Professional commercial painting for offices, retail spaces, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="img-placeholder" style="height: 250px;">🖼️</div>
+                    <div class="project-overlay">
+                        <h3>Modern Home Interior</h3>
+                        <p>Complete interior renovation in Tulsa</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="img-placeholder" style="height: 250px;">🏢</div>
+                    <div class="project-overlay">
+                        <h3>Commercial Office</h3>
+                        <p>Professional office space in Broken Arrow</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="img-placeholder" style="height: 250px;">🏠</div>
+                    <div class="project-overlay">
+                        <h3>Exterior Makeover</h3>
+                        <p>Beautiful home transformation in Bixby</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="img-placeholder" style="height: 250px;">🍽️</div>
+                    <div class="project-overlay">
+                        <h3>Kitchen Renovation</h3>
+                        <p>Cabinet refinishing project in Jenks</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#gallery" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section>
+        <div class="container">
+            <h2>Why Choose Arrow Elite Painters?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Premium Quality</h3>
+                    <p>We use only the highest quality paints and materials for lasting results.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏰</div>
+                    <h3>On-Time Service</h3>
+                    <p>We respect your time and always complete projects on schedule.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Fair Pricing</h3>
+                    <p>Competitive rates with no hidden fees or surprise charges.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Fully Insured</h3>
+                    <p>Licensed and insured for your peace of mind and protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Get your free estimate today and see why we're Tulsa's trusted painting professionals.</p>
+            <a href="tel:9188103453" class="btn btn-primary">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Arrow Elite Painters</h3>
+                    <p>Premium painting services for residential and commercial properties.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📞 (918) 810-3453</p>
+                    <p>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f59c9b939ab59487879a8290999c819085949c9b81908786db969a98">[email&#160;protected]</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Service Areas</h3>
+                    <p>Tulsa • Broken Arrow • Bixby • Jenks</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#services">Services</a><br>
+                    <a href="#gallery">Gallery</a><br>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arrow Elite Painters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
